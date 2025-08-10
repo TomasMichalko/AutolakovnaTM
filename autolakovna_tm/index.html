@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autolakovňa TM</title>
+  <link rel="stylesheet" href="style.css" />
+
+    <meta name="description" content="Autolakovňa TM - profesionálne lakovanie áut, dodávok a prívesov v Slovenskej Ľupči. Moderná kabína, precízne spracovanie, férové ceny.">
+    <meta name="keywords" content="autolakovňa, lakovanie áut, lakovanie dodávok, lakovanie prívesov, lakovanie vozidiel, lakovanie dielov, oprava vozidiel po nehode, lakovanie, Slovenská Ľupča, Banská Bystrica">
+    <meta name="author" content="Tomáš Michalko">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Autolakovňa TM - Profesionálne lakovanie vozidiel">
+    <meta property="og:description" content="Profesionálne lakovanie osobných áut, dodávok a prívesov. Moderná kabína a precíznosť v každom detaile.">
+    <meta property="og:image" content="https://www.tvojadomena.sk/images/og-image.jpg">
+    <meta property="og:url" content="https://www.tvojadomena.sk">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+  <!-- Hover zóna pre vyvolanie menu -->
+  <div class="top-hover-zone" aria-hidden="true"></div>
+
+  <!-- Header / Navigácia -->
+  <header id="site-header" class="header">
+    <div class="container nav-wrap">
+      <div class="logo">Autolakovňa <span>TM</span></div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Otvoriť menu">
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav">
+        <a href="#onas">O nás</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#cennik">Cenník</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- O nás -->
+  <section id="onas" class="section">
+    <div class="container narrow">
+      <h2>O nás</h2>
+      <p>
+        Naša autolakovňa TM je miesto, kde sa klasické lakovanie mení na remeslo s dušou.
+        Pracujeme v modernej a čistej lakovacej kabíne, používame špičkové postupy a materiály,
+        aby výsledok odolal času a vyzeral bezchybne aj zblízka. Každý diel berieme osobitne –
+        od drobných opráv po celolaky. Dôraz kladieme na správny podklad, dorovnanie odtieňa,
+        presné miešanie a hladký finish bez „pomaranča“. Všetko s jasným cieľom: aby tvoje auto
+        pôsobilo prémiovo a ty si mal radosť zakaždým, keď k nemu pristúpiš.
+      </p>
+      <p>
+        Rozumieme, že čas je dôležitý – termíny dohadujeme flexibilne, komunikujeme narovinu
+        a finálnu cenu stanovujeme po obhliadke. Ak chceš vyriešiť škrabanec, poškodenie,
+        alebo komplet zmenu vzhľadu, ozvi sa. U nás sa technická precíznosť spája s citom pre detail.
+      </p>
+    </div>
+  </section>
+
+  <!-- Galéria -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <h2>Galéria</h2>
+
+      <!-- Položka 1 (foto vľavo, text vpravo) -->
+      <article class="gallery-item">
+        <div class="gallery-media">
+          <img src="images/foto1.jpg" alt="Ukážkové lakovanie 1" loading="lazy" />
+        </div>
+        <div class="gallery-text">
+          <h3>Opravy osobných vozidiel</h3>
+          <p>Profesionálne lakovanie osobných áut s dôrazom na detail, presný odtieň a hladký povrch bez nedostatkov.</p>
+        </div>
+      </article>
+
+      <!-- Položka 2 (foto vpravo, text vľavo) -->
+      <article class="gallery-item reverse">
+        <div class="gallery-media">
+          <img src="images/foto2.jpg" alt="Ukážkové lakovanie 2" loading="lazy" />
+        </div>
+        <div class="gallery-text">
+          <h3>Lakovanie úžitkových vozidiel (dodávky)</h3>
+          <p>Vďaka väčšej lakovacej kabíne zvládneme bez problémov nalakovať aj väčšie úžitkové vozidlá vrátane dodávok. Cena sa stanovuje pri obhliadke.</p>
+        </div>
+      </article>
+
+      <!-- Položka 3 (foto vľavo, text vpravo) -->
+      <article class="gallery-item">
+        <div class="gallery-media">
+          <img src="images/foto3.jpg" alt="Ukážkové lakovanie 3" loading="lazy" />
+        </div>
+        <div class="gallery-text">
+          <h3>Lakovanie obytných prívesov a karavanov</h3>
+          <p>Ponúkame aj lakovanie menších obytných prívesov a karavanov s maximálnou dĺžkou 8 m a výškou 3 m. Cena sa stanovuje pri obhliadke.</p>
+        </div>
+      </article>
+
+      <!-- Videá vedľa seba -->
+      <div class="video-row">
+        <video controls preload="metadata" poster="images/video-poster-1.jpg">
+          <source src="videos/video1.mp4" type="video/mp4">
+          Váš prehliadač nepodporuje video.
+        </video>
+        <video controls preload="metadata" poster="images/video-poster-2.jpg">
+          <source src="videos/video2.mp4" type="video/mp4">
+          Váš prehliadač nepodporuje video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenník -->
+  <section id="cennik" class="section section-alt">
+    <div class="container">
+      <h2>Cenník</h2>
+      <div class="price-grid">
+        <div class="price-card"><h3>Lakovanie nárazníka</h3><div class="price">od 150 €</div></div>
+        <div class="price-card"><h3>Lakovanie blatníka</h3><div class="price">od 120 €</div></div>
+        <div class="price-card"><h3>Lakovanie dverí</h3><div class="price">od 150 €</div></div>
+        <div class="price-card"><h3>Lakovanie kapoty</h3><div class="price">od 190 €</div></div>
+        <div class="price-card"><h3>Lakovanie strechy</h3><div class="price">od 190 €</div></div>
+        <div class="price-card"><h3>Prístrek</h3><div class="price">od 70 €</div></div>
+        <div class="price-card"><h3>Leštenie dielov</h3><div class="price">od 30 €</div></div>
+      </div>
+      <p class="note">
+        Ceny sú uvedené bez DPH. Konečná cena závisí od typu farby (uni, perleť, metalíza) a rozsahu poškodenia dielu.
+        Konečná cena bude stanovená pri osobnej obhliadke.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="section">
+    <div class="container narrow">
+      <h2>Kontakt</h2>
+      <address class="contact">
+        <strong>Tomáš Michalko</strong><br>
+        <a href="mailto:tomasmichalko71@gmail.com">tomasmichalko71@gmail.com</a><br>
+        +421 915 238 861<br>
+        Príboj 556 , Slovenská Ľupča
+      </address>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Autolakovňa TM. Všetky práva vyhradené.
+    </div>
+  </footer>
+
+  <!-- Tlačidlo späť hore -->
+  <button id="backToTop" class="back-to-top" aria-label="Späť hore">▲</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

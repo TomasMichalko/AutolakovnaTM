@@ -4,41 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Autolakovňa TM</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2025-08-16-2" />
 
-    <meta name="description" content="Autolakovňa TM - profesionálne lakovanie áut, dodávok a prívesov v Slovenskej Ľupči. Moderná kabína, precízne spracovanie, férové ceny.">
-    <meta name="keywords" content="autolakovňa, lakovanie áut, lakovanie dodávok, lakovanie prívesov, lakovanie vozidiel, lakovanie dielov, oprava vozidiel po nehode, lakovanie, Slovenská Ľupča, Banská Bystrica">
-    <meta name="author" content="Tomáš Michalko">
-    <meta name="robots" content="index, follow">
+  <meta name="description" content="Autolakovňa TM - profesionálne lakovanie áut, dodávok a prívesov v Slovenskej Ľupči. Moderná kabína, precízne spracovanie, férové ceny.">
+  <meta name="keywords" content="autolakovňa, lakovanie áut, lakovanie dodávok, lakovanie prívesov, lakovanie vozidiel, lakovanie dielov, oprava vozidiel po nehode, lakovanie, Slovenská Ľupča, Banská Bystrica">
+  <meta name="author" content="Tomáš Michalko">
+  <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Autolakovňa TM - Profesionálne lakovanie vozidiel">
-    <meta property="og:description" content="Profesionálne lakovanie osobných áut, dodávok a prívesov. Moderná kabína a precíznosť v každom detaile.">
-    <meta property="og:image" content="https://www.autolakovnatm.sk/images/og-image.jpg">
-    <meta property="og:url" content="https://www.autolakovnatm.sk">
-    <meta property="og:type" content="website">
+  <meta property="og:title" content="Autolakovňa TM - Profesionálne lakovanie vozidiel">
+  <meta property="og:description" content="Profesionálne lakovanie osobných áut, dodávok a prívesov. Moderná kabína a precíznosť v každom detaile.">
+  <meta property="og:image" content="https://www.autolakovnatm.sk/images/og-image.jpg">
+  <meta property="og:url" content="https://www.autolakovnatm.sk">
+  <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutoBodyShop",
-  "name": "Autolakovňa TM",
-  "image": "https://autolakovnatm.sk/images/og-image.jpg",
-  "url": "https://www.autolakovnatm.sk/",
-  "email": "mailto:tomasmichalko71@gmail.com",
-  "telephone": "+421 915 238 861",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Príboj 557",
-    "addressLocality": "Slovenská Ľupča",
-    "postalCode": "976 13",
-    "addressCountry": "SK"
-  },
-  "areaServed": "Banská Bystrica a okolie",
-  "priceRange": "€€"
-}
-</script>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preload" as="image" href="images/og-image.jpg">
+  <link rel="canonical" href="https://www.autolakovnatm.sk/">
 </head>
 <body>
 
@@ -48,13 +29,14 @@
   <!-- Header / Navigácia -->
   <header id="site-header" class="header">
     <div class="container nav-wrap">
-      <div class="logo">Autolakovňa <span>TM</span></div>
+      <div class="logo" id="logo" role="button" tabindex="0" aria-label="Prejsť na začiatok stránky">
+        Autolakovňa <span>TM</span>
+      </div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Otvoriť menu">
       <label for="nav-toggle" class="burger" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
       <nav class="nav">
-        <a href="#onas">O nás</a>
         <a href="#galeria">Galéria</a>
         <a href="#cennik">Cenník</a>
         <a href="#kontakt">Kontakt</a>
@@ -62,23 +44,30 @@
     </div>
   </header>
 
-  <!-- O nás -->
-  <section id="onas" class="section">
-    <div class="container narrow">
-      <h2>O nás</h2>
-      <p>
-        Naša autolakovňa TM je miesto, kde sa klasické lakovanie mení na remeslo s dušou.
-        Pracujeme v modernej a čistej lakovacej kabíne, používame špičkové postupy a materiály,
-        aby výsledok odolal času a vyzeral bezchybne aj zblízka. Každý diel berieme osobitne –
-        od drobných opráv po celolaky. Dôraz kladieme na správny podklad, dorovnanie odtieňa,
-        presné miešanie a hladký finish bez „pomaranča“. Všetko s jasným cieľom: aby tvoje auto
-        pôsobilo prémiovo a ty si mal radosť zakaždým, keď k nemu pristúpiš.
-      </p>
-      <p>
-        Rozumieme, že čas je dôležitý – termíny dohadujeme flexibilne, komunikujeme narovinu
-        a finálnu cenu stanovujeme po obhliadke. Ak chceš vyriešiť škrabanec, poškodenie,
-        alebo komplet zmenu vzhľadu, ozvi sa. U nás sa technická precíznosť spája s citom pre detail.
-      </p>
+  <!-- HERO -->
+  <section class="hero" aria-label="Hlavná ponuka">
+    <img class="hero-bg" src="images/og-image.jpg" alt="" aria-hidden="true" loading="eager" />
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="reveal">Lak, ktorý vyzerá lepšie než nový.</h1>
+        <p class="hero-subtitle reveal">
+          Sme moderná lakovňa, kde ponúkame top kvalitu od prípravy až po finálny lesk.
+Pracujeme v modernej kabíne SaicoZero.
+Vďaka veľkosti našej kabíny ponúkame lakovanie nielen osobných áut, ale aj dodávok a obytných prívesov či karavanov s dĺžkou do 8 m a výškou do 3 m.
+V prípade záujmu je možné dohodnúť aj zákazkové lakovanie špecifických dielov, napríklad motocyklových súčiastok a podobne.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#kontakt" aria-label="Objednať obhliadku">Objednať obhliadku</a>
+        </div>
+        <ul class="hero-badges reveal" aria-label="Hlavné výhody">
+          <li>Moderná kabína</li>
+          <li>Zladenie odtieňa</li>
+          <li>Férové ceny</li>
+        </ul>
+        <div class="hero-line reveal" aria-hidden="true">Osobné autá • Dodávky • Prívesy • Karavany do 8 m</div>
+      </div>
     </div>
   </section>
 
@@ -87,7 +76,6 @@
     <div class="container">
       <h2>Galéria</h2>
 
-      <!-- Položka 1 (foto vľavo, text vpravo) -->
       <article class="gallery-item">
         <div class="gallery-media">
           <img src="images/foto1.jpg" alt="Ukážkové lakovanie 1" loading="lazy" />
@@ -98,7 +86,6 @@
         </div>
       </article>
 
-      <!-- Položka 2 (foto vpravo, text vľavo) -->
       <article class="gallery-item reverse">
         <div class="gallery-media">
           <img src="images/foto2.jpg" alt="Ukážkové lakovanie 2" loading="lazy" />
@@ -109,7 +96,6 @@
         </div>
       </article>
 
-      <!-- Položka 3 (foto vľavo, text vpravo) -->
       <article class="gallery-item">
         <div class="gallery-media">
           <img src="images/foto3.jpg" alt="Ukážkové lakovanie 3" loading="lazy" />
@@ -120,7 +106,7 @@
         </div>
       </article>
 
-      <!-- Videá vedľa seba -->
+      <!-- videá -->
       <div class="video-row">
         <video controls preload="metadata" poster="images/video-poster-1.jpg">
           <source src="videos/video1.mp4" type="video/mp4">
@@ -156,16 +142,54 @@
 
   <!-- Kontakt -->
   <section id="kontakt" class="section">
-    <div class="container narrow">
-      <h2>Kontakt</h2>
-      <address class="contact">
-        <strong>Tomáš Michalko</strong><br>
-        <a href="mailto:tomasmichalko71@gmail.com">tomasmichalko71@gmail.com</a><br>
-        +421 915 238 861<br>
-        Príboj 556 , Slovenská Ľupča
-      </address>
+    <div class="container contact-grid">
+      <!-- Ľavý stĺpec: tvoje údaje -->
+      <div class="contact-left">
+        <h2>Kontakt</h2>
+        <address class="contact">
+          <strong>Tomáš Michalko</strong><br>
+          <a href="mailto:tomasmichalko71@gmail.com">tomasmichalko71@gmail.com</a><br>
+          +421 915 238 861<br>
+          Príboj 556, Slovenská Ľupča
+        </address>
+      </div>
+
+      <!-- Pravý stĺpec: formulár -->
+      <div class="contact-right">
+        <h3>Napíšte nám</h3>
+          <form id="contactForm" method="POST" action="contact.php" novalidate>
+            <div class="form-field">
+              <label for="email">Váš e-mail *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="vas@email.sk">
+            </div>
+
+            <div class="form-field">
+              <label for="message">Správa *</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Ako vám môžeme pomôcť?"></textarea>
+            </div>
+
+            <!-- Honeypot proti spamu (nevyplňovať) -->
+            <input type="text" id="website" name="website" class="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+
+            <button class="btn btn-primary" type="submit" id="sendBtn">Odoslať</button>
+            <p class="form-note">* Povinné polia. Odoslaním súhlasíte so spracovaním údajov na účel odpovede.</p>
+
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>  
+      </div>
     </div>
   </section>
+
+<!-- Lightbox pre galériu -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <span class="lightbox-close" aria-label="Zavrieť">×</span>
+
+  <!-- Šípky -->
+  <button class="lightbox-arrow prev" aria-label="Predchádzajúci obrázok">‹</button>
+  <button class="lightbox-arrow next" aria-label="Ďalší obrázok">›</button>
+
+  <img id="lightbox-img" src="" alt="Náhľad obrázka">
+</div>
 
   <footer class="footer">
     <div class="container">

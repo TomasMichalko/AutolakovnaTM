@@ -53,7 +53,7 @@ body{
 .burger{ display:none; cursor:pointer; margin-left:auto; }
 .burger span{ display:block; width:26px; height:3px; background:#fff; margin:5px 0; transition:.2s; }
 
-/* ===== HERO (zmenšené ~30%) ===== */
+/* ===== HERO ===== */
 .hero{
   position:relative; min-height:78vh; display:flex; align-items:center; overflow:hidden;
 }
@@ -66,10 +66,25 @@ body{
   background:linear-gradient(180deg,rgba(0,0,0,.42) 0%, rgba(0,0,0,.34) 40%, rgba(0,0,0,.54) 100%);
   pointer-events:none;
 }
-.hero-inner{ position:relative; z-index:1; }
-.hero-content{
-  max-width:560px; color:#fff; padding:12vh 0 8vh; margin-left:0; /* dohodnuté */
+.hero-inner{
+  position:relative; z-index:1;
+  padding:12vh 0 8vh;           /* odsadenie sem (nie na hero-content) */
 }
+.hero-content{
+  max-width:560px; color:#fff; margin-left:0;
+  padding:0;                     /* bez vert. paddingu, nech glass panel kopíruje obsah */
+  position:relative; display:inline-block; isolation:isolate;
+}
+/* Sklenený panel len pod textom (jemný) */
+.hero-content::before{
+  content:""; position:absolute; inset:-10px; border-radius:16px;
+  background: rgba(0,0,0,.16);
+  -webkit-backdrop-filter: blur(2px) saturate(110%);
+  backdrop-filter: blur(2px) saturate(110%);
+  z-index:-1; pointer-events:none;
+  box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+
 .hero h1{
   margin:0 0 8px; font-size:clamp(26px,4.2vw,40px); line-height:1.08; letter-spacing:.2px;
 }
@@ -88,7 +103,9 @@ body{
 }
 .hero-badges li{
   font-size:13px; color:#fff; background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.22); padding:6px 10px; border-radius:999px; backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.22); padding:6px 10px; border-radius:999px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .hero-line{ margin-top:6px; color:#e8e8e8; opacity:.9; font-size:13px; }
 
@@ -111,14 +128,11 @@ p{ margin:0 0 14px; }
 .gallery-item.reverse .gallery-media{ order:2; }
 .gallery-item.reverse .gallery-text{ order:1; }
 
-/* jednotné a bez duplicít */
 .gallery-media{ position:relative; overflow:hidden; border-radius:14px; }
 .gallery-media img{
   width:100%; max-height:460px; object-fit:cover; display:block; border-radius:14px;
   box-shadow:0 10px 24px rgba(0,0,0,.15);
-  cursor:pointer;
-  transition:transform .3s ease, filter .3s ease;
-  will-change:transform;
+  cursor:pointer; transition:transform .3s ease, filter .3s ease; will-change:transform;
 }
 .gallery-media:hover img{ transform:scale(1.04); filter:brightness(0.9); }
 
@@ -138,12 +152,11 @@ p{ margin:0 0 14px; }
 .price-card{
   background:var(--mid); color:#fff; border-radius:14px; padding:22px; text-align:center;
   box-shadow:0 10px 24px rgba(0,0,0,.18);
-  transition:transform .25s ease, box-shadow .25s ease; /* pre hover */
+  transition:transform .25s ease, box-shadow .25s ease;
 }
 .price-card h3{ margin:0 0 8px; font-size:18px; font-weight:700; }
 .price{ color:var(--pink); font-weight:800; font-size:22px; }
 .note{ margin-top:16px; color:#333; }
-
 .price-card:hover{
   transform:translateY(-6px);
   box-shadow:0 18px 36px rgba(0,0,0,.22), 0 0 0 2px var(--pink) inset;
@@ -168,7 +181,7 @@ p{ margin:0 0 14px; }
 .back-to-top.show{ display:flex; }
 .back-to-top:hover{ transform:translateY(-2px); }
 
-/* ===== Lightbox (zjednotený) ===== */
+/* ===== Lightbox ===== */
 .lightbox{
   position:fixed; inset:0; background:rgba(0,0,0,.85);
   display:none; align-items:center; justify-content:center;
@@ -183,8 +196,6 @@ p{ margin:0 0 14px; }
   transition:transform .2s ease;
 }
 .lightbox-close:hover{ transform:scale(1.1); }
-
-/* Lightbox šípky */
 .lightbox-arrow{
   position:absolute; top:50%; transform:translateY(-50%);
   width:48px; height:48px; border-radius:50%;
@@ -209,17 +220,17 @@ p{ margin:0 0 14px; }
   .price-grid{ grid-template-columns:repeat(3,1fr); }
   .video-row video{ height:300px; }
 }
+@media (max-width:900px){              /* väčší breakpoint pre mobily/phablety */
+  .contact-grid{ grid-template-columns:1fr; }   /* Kontakt nad Formulár – pod sebou */
+  .contact-right{ order:2; }
+  .contact-left{ order:1; }
+}
 @media (max-width:800px){
   .gallery-item,
   .gallery-item.reverse{ grid-template-columns:1fr; }
   .gallery-item.reverse .gallery-media,
   .gallery-item.reverse .gallery-text{ order:initial; }
-
   .video-row{ grid-template-columns:1fr; }
-
-  .contact-grid{ grid-template-columns:1fr; }
-  .contact-right{ order:2; }
-  .contact-left{ order:1; }
 }
 @media (max-width:720px){
   .nav{
@@ -233,7 +244,8 @@ p{ margin:0 0 14px; }
   .price-grid{ grid-template-columns:1fr 1fr; }
 
   .hero{ min-height:70vh; }
-  .hero-content{ max-width:94%; padding:14vh 0 10vh; margin-left:0; }
+  .hero-inner{ padding:14vh 0 10vh; }   /* mobilné odsadenie */
+  .hero-content{ max-width:94%; margin-left:0; padding:0; }
 }
 @media (max-width:420px){
   .price-grid{ grid-template-columns:1fr; }
@@ -259,7 +271,7 @@ p{ margin:0 0 14px; }
   }
 }
 
-/* ===== Kontakt mriežka + formulár ===== */
+/* ===== Kontakt mriežka + formulár (desktop default) ===== */
 .contact-grid{
   display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start;
 }
